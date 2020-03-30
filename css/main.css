@@ -378,3 +378,17 @@ textarea.input100 {
     opacity: 1;
   }
 }
+/* Jika ukuran layar 680px atau kurang dari itu */
+
+@media screen and (max-width:680px){
+
+	#maincontent{
+		width: auto;
+		float: none;
+	}
+	#sidebar{
+		width: auto;
+		float: none;
+	}
+}
+/* Jika ukuran layar 480px atau kurang */ @media screen and (max-width: 480px) { #header{ height: auto; } #sidebar{ display: none; } }
