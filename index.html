@@ -285,52 +285,41 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-</head>
-<body>
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
+<div style="width: 400px;">
+</div>
+<p style="width : 450px;font-size : 12px;">send me a message</p>
+<div style="display: flex; padding-bottom: 18px;width : 450px;">
+<div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<br/>
+<input type="text" id="data_4" name="data_4" style="width: 100%;" class="form-control"/>
+</div>
+<div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<br/>
+<input type="text" id="data_5" name="data_5" style="width: 100%;" class="form-control"/>
+</div>
+</div><div style="padding-bottom: 18px;">Email<br/>
+<input type="text" id="data_6" name="data_6" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+<div>
+<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:3EQGNADFWQU4" type="text/javascript"></script>
+</div>
+</form>
 
-
-	<div class="container-contact100">
-
-		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
-				<span class="contact100-form-title">
-					Send Me A Message
-				</span>
-
-				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
-					<input class="input100" type="text" name="name" placeholder="Full Name">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
-					<input class="input100" type="text" name="email" placeholder="E-mail">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
-					<input class="input100" type="text" name="phone" placeholder="Phone">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
-					<textarea class="input100" name="message" placeholder="Your Message"></textarea>
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
-							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-							Send
-						<a herf="https://www.100forms.com/js/FORMKEY:AUKJ58ZG24DS/SEND:usamazaid26@gmail.com"></span>
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
-
-
-  </div>
+<script type="text/javascript">
+function validateForm() {
+if (!validateEmail(document.getElementById('data_6').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
 	          </section>
 <hr class="m-0">
 
