@@ -174,3 +174,17 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+/* Jika ukuran layar 680px atau kurang dari itu */
+
+@media screen and (max-width:680px){
+
+	#maincontent{
+		width: auto;
+		float: none;
+	}
+	#sidebar{
+		width: auto;
+		float: none;
+	}
+}
+ @media screen and (max-width: 480px) { #header{ height: auto; } #sidebar{ display: none; } }
